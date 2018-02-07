@@ -1,0 +1,13 @@
+#!/bin/bash
+#creating a partition empty file
+dd if=/dev/zero of=./32MB.img bs=1M count=32
+hexdump ./32MB.img | less
+mkfs -t ext4 ./32MB.img
+ls -l /sbin/mksf.*
+mkdir/mnt/tmp
+sudo mount ./32MB.img /mnt/tmp
+mount; df -h
+lsblk
+cd/tmp/tmp; ls
+echo "Hello World" > ./hello.txt
+sudo unmount /mnt/tmp
